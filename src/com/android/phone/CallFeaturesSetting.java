@@ -194,6 +194,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String SIP_SETTINGS_CATEGORY_KEY =
             "sip_settings_category_key";
     private static final String BUTTON_EXIT_TO_HOMESCREEN_KEY = "button_exit_to_home_screen_key";
+    private static final String BUTTON_LANDSCAPE_KEY = "button_landscape_key";
     private static final String LOCKSCREEN_IF_CALL_ENDS_WITH_SCREENOFF =
             "lockscreen_if_call_ends_with_screenoff";
 
@@ -297,7 +298,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private CheckBoxPreference mCallEndedWithScreenOffLocks;
 
     private CheckBoxPreference mButtonExitToHomeScreen;
-
+	private CheckBoxPreference mButtonLandscape;
     private class VoiceMailProvider {
         public VoiceMailProvider(String name, Intent intent) {
             this.name = name;
@@ -310,7 +311,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     /**
      * Forwarding settings we are going to save.
      */
-    private static final int [] FORWARDING_SETTINGS_REASONS = new int[] {
+    static final int [] FORWARDING_SETTINGS_REASONS = new int[] {
         CommandsInterface.CF_REASON_UNCONDITIONAL,
         CommandsInterface.CF_REASON_BUSY,
         CommandsInterface.CF_REASON_NO_REPLY,
